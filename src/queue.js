@@ -6,11 +6,11 @@ class PriorityQueue {
 	}
 
 	push(data, priority) {
-
+		// this.push();
 	}
 
 	shift() {
-
+		this.pop();
 	}
 
 	size() {
@@ -18,7 +18,9 @@ class PriorityQueue {
 	}
 
 	isEmpty() {
-		
+		if (this.root == 0) {
+			return true;
+		} else {return false}
 	}
 }
 
