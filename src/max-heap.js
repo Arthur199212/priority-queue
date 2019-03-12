@@ -44,7 +44,7 @@ class MaxHeap {
 	}
 
 	insertNode(node) {
-		if ( isEmpty() ) {
+		if ( this.isEmpty() ) {
 			this.root = node;
 			this.parentNodes[0] = node;
 		} else {
