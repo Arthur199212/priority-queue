@@ -21,9 +21,9 @@ class Node {
 	removeChild(node) {
     if (node.parent == null) {
       throw new Error('Passed node is not a child of this node');
-    } else if (node.parent.left = node) {
+    } else if (node.parent.left == node) {
       node.parent.left = null;
-    } else if (node.parent.right = node) {
+    } else if (node.parent.right == node) {
       node.parent.right = null;
     }
 
@@ -31,7 +31,9 @@ class Node {
 	}
 
 	remove() {
-		// child.parent.removeChild(child);
+    if (this.parent != null) {
+      this.parent.removeChild(this);
+    }
 	}
 
 	swapWithParent() {
