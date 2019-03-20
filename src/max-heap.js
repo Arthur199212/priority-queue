@@ -26,10 +26,12 @@ class MaxHeap {
 	}
 
 	detachRoot() {
-    let result = this.parentNodes[0];
+    let result = this.root;
     
     this.root = null;
-    // this.parentNodes.shift();
+    this.parentNodes.shift();
+
+    this.sizeCount--;
 
     return result;
 	}
