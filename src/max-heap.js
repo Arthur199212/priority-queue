@@ -51,9 +51,9 @@ class MaxHeap {
 		if (this.parentNodes.length > 0) {
 			lastNode = this.parentNodes.pop();
 
-			if (lastNode.parent.right == lastNode) {
+			if (lastNode.parent && lastNode.parent.right == lastNode) {
 				lastNode.parent.right = null;
-			} else if (lastNode.parent.left == lastNode) {
+			} else if (lastNode.parent && lastNode.parent.left == lastNode) {
 				lastNode.parent.left = null;
 			}
 		} else {
